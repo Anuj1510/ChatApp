@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "875095484675",
+    "project_id": "chatkaromujhse",
+    "storage_bucket": "chatkaromujhse.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:875095484675:android:347c6a6b9a63eead1e6136",
+        "android_client_info": {
+          "package_name": "com.example.chatkaromujhse"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "875095484675-h8ao7pjls4g8n4ubc27k8f29pjd534nb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBGcE_JYU-033ECnjqN5c6Cx7pBYwyi2xk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "875095484675-h8ao7pjls4g8n4ubc27k8f29pjd534nb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
