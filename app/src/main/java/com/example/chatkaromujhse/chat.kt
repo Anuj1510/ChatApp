@@ -34,34 +34,35 @@ class chat : AppCompatActivity() {
 
         supportActionBar?.title = name
 
-        messageAdapter = MessageAdapter(this,messageList)
-        messageList = ArrayList()
 
-//        binding.chatRV.layoutManager = LinearLayoutManager(this)
-//        binding.chatRV.adapter = messageAdapter
-//
-//        //logic for adding data to recyclerView
-//        mDbRef.child("chats").child(senderRoom!!).child("message")
-//            .addValueEventListener(object : ValueEventListener {
-//                override fun onDataChange(snapshot: DataSnapshot) {
-//
-//                    messageList.clear()
-//
-//                    for(postSnapshot in snapshot.children){
-//
-//                        val message = postSnapshot.getValue(Message::class.java)
-//                        messageList.add(message!!)
-//
-//                    }
-//                    messageAdapter.notifyDataSetChanged()
-//                }
-//
-//                override fun onCancelled(error: DatabaseError) {
-//
-//                }
-//
-//
-//            })
+        messageList = ArrayList()
+        messageAdapter = MessageAdapter(this,messageList)
+
+        binding.chatRV.layoutManager = LinearLayoutManager(this)
+        binding.chatRV.adapter = messageAdapter
+
+        //logic for adding data to recyclerView
+
+
+        mDbRef.child("chats").child(senderRoom!!).child("message")
+            .addValueEventListener(object : ValueEventListener {
+                override fun onDataChange(snapshot: DataSnapshot) {
+
+                    messageList.clear()
+
+                    for(postSnapshot in snapshot.children){
+
+                        val message = postSnapshot.getValue(Message::class.java)
+                        messageList.add(message!!)
+
+                    }
+                    messageAdapter.notifyDataSetChanged()
+                }
+
+                override fun onCancelled(error: DatabaseError) {}
+
+
+            })
 
         //adding the message to database
 
